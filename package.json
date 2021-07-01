@@ -152,6 +152,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^2.0.0",
     "node-sass": "^6.0.1"
   }
 }
