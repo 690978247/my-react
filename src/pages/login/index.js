@@ -1,4 +1,5 @@
 import React, { Component } from 'react' 
+import Header from '../../components/header'
 import './login.scss'
 
 class Login extends Component {
@@ -6,6 +7,7 @@ class Login extends Component {
     return (
       <div>
         <h1>Login page</h1>
+        <Header />
         <button onClick={/* this.gotoHome.bind(this) */ () => {this.gotoHome()} } >跳转Home页</button>
       </div>
     )

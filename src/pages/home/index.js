@@ -6,7 +6,7 @@ class Home extends Component {
   render() {
     return (
       <div className="P-home">
-        <Header />
+        <Header param1='abc' param2='c' func1={() => {console.log('func1')}} />
         <h1>Home Page</h1>
       </div>
     )
