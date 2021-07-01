@@ -6,8 +6,13 @@ class Login extends Component {
     return (
       <div>
         <h1>Login page</h1>
+        <button onClick={/* this.gotoHome.bind(this) */ () => {this.gotoHome()} } >跳转Home页</button>
       </div>
     )
+  }
+
+  gotoHome() {
+    this.props.history.push('/home')
   }
 }
 
