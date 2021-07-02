@@ -1,0 +1,19 @@
+.address-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  .address-input {
+    border-color: transparent
+  }
+  .address-input:hover{
+    border-color: #ccc
+  }
+  .address-btn {
+    margin-left: 20px;
+    border: 1px solid #52CEEC;
+    color: #52CEEC;
+    font-weight: bold;
+  }
+
+}
