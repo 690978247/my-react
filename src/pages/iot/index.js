@@ -1,6 +1,9 @@
 import React, { Component } from 'react' 
 import './iot.scss'
-import { Table, Input, Button, Modal, Tree } from 'antd'
+import { Table, Input, Button, Modal, Tree, Select  } from 'antd'
+import { dataOptions } from '../../utils/data'
+
+const { Option } = Select
 
 class IOT extends Component  {
   constructor(props){
@@ -25,8 +28,18 @@ class IOT extends Component  {
         },
         {
           title: '数据类型',
+          width: 260,
           dataIndex: 'dataType',
-          className: 'table-thead'
+          className: 'table-thead',
+          render: (dataType) => (
+            <Select className="dataType-select" defaultValue={dataType} onChange={(event) => {this.changeDataType(event)}} >
+              {
+                dataOptions.map(item => (
+                  <Option value={item.value} key={item.value} >{item.name}</Option>
+                ))
+              }
+            </Select>
+          )
         },
         {
           title: '变量地址',
@@ -169,6 +182,10 @@ class IOT extends Component  {
         }
       ]
     }
+  }
+
+  changeDataType(event) {
+    console.log(event)
   }
 
   poenPop() {
