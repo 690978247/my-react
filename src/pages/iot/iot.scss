@@ -16,7 +16,67 @@
     font-weight: bold;
   }
 }
-  th.table-thead {
-    background-color: #626262 !important;
-    color: white !important;
+
+.ant-table-thead th.table-thead{
+  background-color: #626262;
+  color: white;
+}
+
+.ant-table-thead th.opc-th{
+  background: #91C2F4;
+  height: 37px;
+  line-height: 37px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #316BA6;
+}
+
+.ant-table-row td.opc-th {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 37px;
+  line-height: 37px;
+}
+
+// antd 弹窗样式修改
+.popup{
+  .ant-modal-header {
+    text-align: center;
+    background: #409EFF;
+    .ant-modal-title {
+      color: #fff;
+    }
   }
+  .ant-modal-close-x {
+    color: #fff;
+  }
+}
+
+.popup-wrap{
+  display: flex;
+  height: 460px;
+}
+
+.pw-left{
+  flex: 1.2;
+  height: 100%;
+  margin-right: 20px;
+  .group-title {
+    height: 37px;
+    line-height: 37px;
+    padding-left: 16px;
+    background: #91C2F4;
+    color: #316BA6;
+  }
+  .group-tree {
+    height: calc(100% - 34px);
+    overflow: auto;
+    user-select: none;
+    background: #F5F7FC;
+  }
+}
+
+.pw-right{
+  flex: 2;
+  height: 100%;
+}

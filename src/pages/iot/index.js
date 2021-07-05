@@ -73,6 +73,33 @@ class IOT extends Component  {
           zoom: '',
           dataFile: ''
         },
+      ],
+      opcCloums: [
+        {
+          title: '',
+          dataIndex: 'num',
+          className: 'opc-th',
+          key: 'num'
+        },
+        {
+          title: '变量名',
+          dataIndex: 'name',
+          className: 'opc-th',
+          key: 'name'
+        },
+        {
+          title: '数据类型',
+          dataIndex: 'dataType',
+          className: 'opc-th',
+          key: 'dataType'
+        }
+      ],
+      opcTableData: [
+        {
+          num: '1',
+          name: 'Tag_1',
+          dataType: '二进制变量'
+        }
       ]
     }
   }
@@ -106,10 +133,29 @@ class IOT extends Component  {
         />
         <Modal 
           title="选择OPC变量"
+          className="popup"
+          width="760px"
           visible={this.state.popup}
           onOk={() => {this.confirmPop()}}
           onCancel={() => {this.cancelPop()}}
-        />
+          okText="确认"
+          cancelText="取消"
+        >
+          <div className="popup-wrap" >
+            <div className="pw-left" >
+              <div className="group-title" >组列表</div>
+              <div className="group-tree" >a tree</div>
+            </div>
+            <div className="pw-right" >
+              <Table
+                columns={this.state.opcCloums}
+                dataSource={this.state.opcTableData}
+                pagination={false}
+                bordered
+              />
+            </div>
+          </div>
+        </Modal>
       </>
     )
   }
