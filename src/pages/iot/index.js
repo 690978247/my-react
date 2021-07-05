@@ -11,22 +11,27 @@ class IOT extends Component  {
         {
           title: '序号',
           dataIndex: 'num',
+          className: 'table-thead'
         },
         {
           title: '变量名',
           dataIndex: 'name',
+          className: 'table-thead'
         },
         {
           title: '变量描述',
           dataIndex: 'describe',
+          className: 'table-thead'
         },
         {
           title: '数据类型',
           dataIndex: 'dataType',
+          className: 'table-thead'
         },
         {
           title: '变量地址',
           dataIndex: 'address',
+          className: 'table-thead',
           render: address => (
             <div className="address-text">
               <Input className="address-input" />
@@ -37,6 +42,7 @@ class IOT extends Component  {
         {
           title: '字符长度',
           dataIndex: 'codeLen',
+          className: 'table-thead',
           render: (codeLen) => (
             <div className="address-text">
               <Input className="address-input" value={codeLen} />
@@ -46,10 +52,12 @@ class IOT extends Component  {
         {
           title: '缩放比',
           dataIndex: 'zoom',
+          className: 'table-thead'
         },
         {
           title: '数据归档',
           dataIndex: 'dataFile',
+          className: 'table-thead'
         },
         
       ],
