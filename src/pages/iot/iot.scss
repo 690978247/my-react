@@ -38,6 +38,11 @@
   line-height: 37px;
 }
 
+.ant-table-row:nth-child(even) {
+  background-color: #F5F7FC;
+}
+
+
 // antd 弹窗样式修改
 .popup{
   .ant-modal-header {
@@ -72,6 +77,9 @@
     height: calc(100% - 34px);
     overflow: auto;
     user-select: none;
+    background: #F5F7FC;
+  }
+  .ant-tree {
     background: #F5F7FC;
   }
 }

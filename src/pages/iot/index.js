@@ -1,6 +1,6 @@
 import React, { Component } from 'react' 
 import './iot.scss'
-import { Table, Input, Button, Modal } from 'antd'
+import { Table, Input, Button, Modal, Tree } from 'antd'
 
 class IOT extends Component  {
   constructor(props){
@@ -78,18 +78,22 @@ class IOT extends Component  {
         {
           title: '',
           dataIndex: 'num',
+          width: 50,
+          align: 'center',
           className: 'opc-th',
           key: 'num'
         },
         {
           title: '变量名',
           dataIndex: 'name',
+          align: 'center',
           className: 'opc-th',
           key: 'name'
         },
         {
           title: '数据类型',
           dataIndex: 'dataType',
+          align: 'center',
           className: 'opc-th',
           key: 'dataType'
         }
@@ -97,8 +101,71 @@ class IOT extends Component  {
       opcTableData: [
         {
           num: '1',
+          key: '1',
           name: 'Tag_1',
           dataType: '二进制变量'
+        },
+        {
+          num: '2',
+          key: '2',
+          name: 'Tag_2',
+          dataType: '有符号8位整型'
+        },
+        {
+          num: '3',
+          key: '3',
+          name: 'Tag_3',
+          dataType: '文本变量8位字符集'
+        },
+        {
+          num: '4',
+          key: '4',
+          name: 'Tag_4',
+          dataType: '字符串'
+        }
+      ],
+      treeData: [
+        {
+          title: '组1',
+          key: '1',
+          children: [
+            {
+              title: '组1-1',
+              key: '1-1'
+            },
+            {
+              title: '组1-2',
+              key: '1-2'
+            }
+          ]
+        },
+        {
+          title: '组2',
+          key: '2',
+          children: [
+            {
+              title: '组2-1',
+              key: '2-1'
+            }
+          ]
+        },
+        {
+          title: '组3',
+          key: '3',
+          children: [
+            {
+              title: '组3-1',
+              key: '3-1'
+            }
+          ]
+        },
+        {
+          title: '组4',
+          key: '4',
+        },
+        {
+          title: '组5',
+          key: '5',
         }
       ]
     }
@@ -144,11 +211,17 @@ class IOT extends Component  {
           <div className="popup-wrap" >
             <div className="pw-left" >
               <div className="group-title" >组列表</div>
-              <div className="group-tree" >a tree</div>
+              <div className="group-tree" >
+                <Tree 
+                  blockNode
+                  treeData={this.state.treeData}
+                />
+              </div>
             </div>
             <div className="pw-right" >
               <Table
                 columns={this.state.opcCloums}
+                scroll={{ y: 420 }}
                 dataSource={this.state.opcTableData}
                 pagination={false}
                 bordered
