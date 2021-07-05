@@ -38,7 +38,11 @@
   line-height: 37px;
 }
 
-.ant-table-row:nth-child(even) {
+.ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #E4EEFF !important;
+}
+
+.ant-table-row:nth-child(odd) {
   background-color: #F5F7FC;
 }
 
