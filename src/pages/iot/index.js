@@ -86,6 +86,17 @@ class IOT extends Component  {
           zoom: '',
           dataFile: ''
         },
+        {
+          key: '2',
+          num: '2',
+          name: '',
+          describe: '',
+          dataType: '二进制变量',
+          address: '',
+          codeLen: '4',
+          zoom: '',
+          dataFile: ''
+        },
       ],
       opcCloums: [
         {

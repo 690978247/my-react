@@ -92,6 +92,10 @@
   }
 }
 
+.ant-tree .ant-tree-node-content-wrapper.ant-tree-node-selected {
+   background: #E4EEFF !important;
+}
+
 .pw-right{
   flex: 2;
   height: 100%;
